@@ -1,0 +1,25 @@
+# slf4j yml日志配置方式
+logging:
+  # 配置级别
+  level:
+    root: info
+    #分包配置级别，即不同的目录下可以使用不同的级别  trace < debug < info < warn < error
+    #com.example.demo.D1119: trace
+    # 在不指定路径，只指定输出日志的文件名，默认输出至当前项目下
+  # 若指定，则会输出至指定目录下
+  file: C:/Users/jiabao/Desktop/Spring Boot学习/logs/springboot.log
+
+spring:
+  artemis:
+    port: 8080
+    context-path: /springboot
+    datasource:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:8080/dbmysql?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+      username: root
+      password: 12345678
+
+      jpa:
+        hibernate:
+          ddl-auto: update
+          show-sql: true
